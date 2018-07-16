@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#p1").click(function(){
+            
+            $.post(" http://v.juhe.cn/weather/index",
+            	    {
+            	        user:"菜鸟",
+            	        password:"123"
+            	    },
+            	        function(data,status){
+            	        alert("数据: \n" + data + "\n状态: " + status);
+            	    });
+        });
+    });
+</script>
+</head>
+
+<body>
+<h2>这是一个标题</h2>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<p>这是另一个段落。</p>
+
+<button id="p1">查询天气</button>
+</body>
+</html>
