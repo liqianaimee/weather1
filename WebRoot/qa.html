@@ -18,7 +18,7 @@
         }
     </style>
     <script type="text/javascript">
-    var q1;
+    var q1;//定义全局变量
     var q2;
     var q3;
     var q4;
@@ -70,7 +70,7 @@
         		//////////////
         		
         	    $("#btn-ans").click(function(){
-        			var s1 = $("input[name=radiobutton1]:checked").val();
+        			var s1 = $("input[name=radiobutton1]:checked").val();//显示答案
         			var s2 = $("input[name=radiobutton2]:checked").val();
         			var s3 = $("input[name=radiobutton3]:checked").val();
         			var s4 = $("input[name=radiobutton4]:checked").val();
@@ -81,7 +81,7 @@
         			
         			var x=0;
         			if(s1==q1.answer)
-        			   x=x+20;
+        			   x=x+20;//计分
         			if(s2==q2.answer)
         			   x=x+20;
         			if(s3==q3.answer)
