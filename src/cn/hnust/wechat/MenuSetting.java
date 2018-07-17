@@ -42,7 +42,7 @@ public class MenuSetting {
         		+ "{"
                 + "\"type\":\"view\","
                 + "\"name\":\"¿ªÊ¼´ðÌâ\","
-                + "\"url\":\"http://i3bjrr.natappfree.cc/wechat/qa.html\""
+                + "\"url\":\"http://btr393.natappfree.cc/wechat/qa.html\""
                 + "}]"
         		+ "},"
         		+ "{"

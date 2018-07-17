@@ -18,24 +18,29 @@
         }
     </style>
     <script type="text/javascript">
+    var q1;
+    var q2;
+    var q3;
+    var q4;
+    var q5;
         $(document).ready(function(){
         	    /////////////
         	    $.get("/wechat/questions",
         	    function(data,status){
         	    var o=eval('('+data+')');    	     
-        	    var q1=o.question1;
-        	    var q2=o.question2;
-        	    var q3=o.question3;
+        	    q1=o.question1;
+        	    q2=o.question2;
+        	    q3=o.question3; 
+        	    q4=o.question4;  
+        	    q5=o.question5;
         	    
-        	    var q4=o.question4;  
-        	    var q5=o.question5;
-        	     var standard="CCCC";
         	     
         	    $("#t1").text(q1.question);
         		$("#a11").html(q1.optA);
         		$("#a12").html(q1.optB);
         		$("#a13").html(q1.optC);
         		$("#a14").html(q1.optD);
+        		
         		
         		$("#t2").text(q2.question);
         		$("#a21").html(q2.optA);
@@ -70,8 +75,27 @@
         			var s3 = $("input[name=radiobutton3]:checked").val();
         			var s4 = $("input[name=radiobutton4]:checked").val();
         			var s5 = $("input[name=radiobutton5]:checked").val();
+        			//alert("tijaolou");
+        			//console.log(q1);
+        			//alert(q1);
         			
-                alert("已交卷\n我的作答是:" + s1+s2+s3+s4+s5 + "\n我的得分是: 100分" +"\n谢谢");
+        			var x=0;
+        			if(s1==q1.answer)
+        			   x=x+20;
+        			if(s2==q2.answer)
+        			   x=x+20;
+        			if(s3==q3.answer)
+        			   x=x+20;
+        			if(s4==q4.answer)
+        			   x=x+20;
+        			if(s5==q5.answer)
+        			   x=x+20;
+        			
+                alert("已交卷\n我的作答是:" + s1+s2+s3+s4+s5 + "\n我的得分是: " + x+"分\n");
+                 alert("革命尚未成功，同志还需努力！加油噢！");
+                if(x>=60)
+               alert("你咋这么聪明呢，或许就是近我者赤吧，哈哈哈哈哈哈哈嗝");
+               
             });
         });
     </script>
